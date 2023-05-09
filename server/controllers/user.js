@@ -21,10 +21,12 @@ export const userRegister = async (req, res) => {
   }
   password = await bcrypt.hash(password, 10);
   
+  const role='user';
 
   user = await User.create({
     name,
     email,
+    role,
     password,
   });
 
@@ -108,3 +110,5 @@ export const userprofile=(req,res)=>{
   })     
     
 }
+
+

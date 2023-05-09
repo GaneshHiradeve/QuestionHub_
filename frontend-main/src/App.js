@@ -15,6 +15,7 @@ import Alert from '@mui/material/Alert';
 import Swal from 'sweetalert2';
 import { getallPost, getuserPost } from './components/redux/action/post';
 import Userpost from './components/Userpost';
+import AdminDash from './components/dashboard/AdminDash';
 
 
 
@@ -56,12 +57,13 @@ function App() {
      
  },[dispatch])
 
- 
+
   return (
     <>
    
 
     <Router>
+    
       <Routes>
         <Route path='/' element={
           <ProtectedRoute isAuthenticated={ !isAuthenticated} redirect='/header'>
@@ -148,8 +150,16 @@ function App() {
         }/>
 
 
+<Route path="/admindash" element={
 
-
+<ProtectedRoute  
+adminRoute={true} isAdmin={user && user.role==='admin'}     isAuthenticated={isAuthenticated} redirect='/header'>
+<AdminDash  userData={allData}/>
+</ProtectedRoute>
+       
+      
+    
+      } />
 
 
 

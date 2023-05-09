@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from "react";
 import "./css/Post.css";
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import Avatar from "@mui/material/Avatar";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
 import ArrowDownwardOutlinedIcon from "@mui/icons-material/ArrowDownwardOutlined";
@@ -14,13 +15,14 @@ import { Modal } from 'react-responsive-modal';
 import ReactQuill from "react-quill";
 import 'react-quill/dist/quill.snow.css'
 import { useDispatch, useSelector } from "react-redux";
-import { getallPost, getpostLike } from "./redux/action/post";
+import { deleteuserPost, getallPost, getpostLike, getpostReport } from "./redux/action/post";
 
 
 
 function Post({data,like}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+  const mydata=new Date(data.createdAt)
+  const {user}=useSelector(state=>state.user)
   const Close = <CloseIcon />;
 
   const dispatch=useDispatch();
@@ -29,6 +31,15 @@ function Post({data,like}) {
     dispatch(getpostLike(id))
     
     
+  }
+  const reportHandler=(e,id)=>{
+    e.preventDefault();
+    dispatch(getpostReport(id))
+  }
+
+  const deletepostHandler=(e,id)=>{
+    e.preventDefault();
+    dispatch(deleteuserPost(id))
   }
 
  
@@ -39,7 +50,7 @@ function Post({data,like}) {
       <div className="post__info">
         <Avatar src={user} />
         <h3 className="user_name">{data.name}</h3>
-        <small>Timestamp</small>
+        <small>{mydata.getDate()}/{mydata.getMonth()}/{mydata.getFullYear()}</small>
       </div>
       <div className="post__body">
         
@@ -82,22 +93,43 @@ function Post({data,like}) {
         <div className="post__footerAction">
           <div onClick={(e)=>upvote1Handler(e,data._id)}>
           <ArrowUpwardOutlinedIcon  />
-
+        
           </div>
          
          
         </div>
        
         <h3>{data.likes.length}</h3>
-        <ChatBubbleOutlinedIcon />
 
+      <div >
+        <ArrowDownwardOutlinedIcon/>
+        </div>
+
+
+
+        <div className="post__footerAction"  onClick={(e)=>reportHandler(e,data._id) }>
+       
+        <h5 className="report"><ReportGmailerrorredIcon /></h5>
+
+        </div>
+        <h3>{data.reports.length}</h3>
         <div style={{
           
         }}>
         </div>
         <div className="post__footerLeft">
-        <button onClick={()=>setIsModalOpen(true) }  className="post__btnAnswer" >Answer</button>
+        <button onClick={()=>setIsModalOpen(true) }  className="post__btnAnswer"  style={{ marginRight:"15px"}} >Reply</button>
 
+      {
+          user && user.role=='admin'?<>
+                  <button onClick={()=>setIsModalOpen(true) }  className="post__btnAnswer"  style={{ marginRight:"15px"}} >Block</button>
+
+          <button onClick={(e)=>deletepostHandler(e,data._id) }  className="post__btnAnswer"  style={{ marginRight:"15px"}} >Delete</button>
+
+          </>:<>
+   
+          </>
+      }
 
         </div>
 

@@ -182,7 +182,7 @@ export const userReducer = createReducer(
     },
 
     // questionid
-   
+    // /report/  
     getlikeRequest: state => {
       state.loading = true;
     },
@@ -194,6 +194,38 @@ export const userReducer = createReducer(
       
     },
     getlikeFail: (state, action) => {
+      state.loading = false;
+      state.error = action.payload;
+
+    },
+
+
+    getreportRequest: state => {
+      state.loading = true;
+    },
+    getreportSuccess: (state, action) => {
+      state.loading = false;
+      state.report = action.payload.like1;
+      state.reportlength = action.payload.totallength;
+      state.message=action.payload.message
+      
+    },
+    getreportFail: (state, action) => {
+      state.loading = false;
+      state.error = action.payload;
+
+    },
+
+    deletepostRequest: state => {
+      state.loading = true;
+    },
+    deletepostSuccess: (state, action) => {
+      state.loading = false;
+     
+      state.message=action.payload.message
+      
+    },
+    deletepostFail: (state, action) => {
       state.loading = false;
       state.error = action.payload;
 

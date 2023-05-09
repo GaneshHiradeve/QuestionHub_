@@ -41,7 +41,7 @@
   flex-direction: column;
 }
 
-.post__body > .post__question {
+.post_body > .post_question {
   margin-top: 10px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -65,8 +65,24 @@
   border-radius: 5px;
 }
 
+#answer:hover{
+  color: green;
+}
+.chat{
+  margin-left:15px;
+
+}
+.chat:hover{
+  color: green;
+}
+.report{
+  margin-left:10px;
+}
+.report:hover{
+  color: rgb(245, 20, 20);
+}
 .post__btnAnswer:hover {
-  color: #222;
+  color: #e31515;
   background: lightgray;
 }
 
@@ -74,7 +90,7 @@
   text-decoration: underline;
 }
 
-.post__body > .post__answer > p {
+.post_body > .post_answer > p {
   margin-bottom: 10px;
 }
 
@@ -134,7 +150,6 @@
 .post__footerLeft > .MuiSvgIcon-root:hover {
   color: rgb(0, 140, 255);
 }
-
 .modal__question {
   display: flex;
   align-items: center;
@@ -223,4 +238,3 @@
   width: 100%;
   height: 120px;
 }
-

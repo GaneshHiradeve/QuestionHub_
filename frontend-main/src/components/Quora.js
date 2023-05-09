@@ -14,7 +14,7 @@ function Quora({allData}) {
         <div className="quora__content">
           <Sidebar />
           <Feed allData={allData} />
-          <Widget />
+          <Widget allData={allData} />
         </div>
       </div>
     </div>
