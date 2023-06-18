@@ -52,7 +52,7 @@ export const getallPost = async (req, res) => {
   });
 };
 
-export const getallPostdata = async (req, res) => {
+export const  getallPostdata = async (req, res) => {
   const allData = await Post.find({}).sort({ likes: -1 });
 
   res.status(201).json({
