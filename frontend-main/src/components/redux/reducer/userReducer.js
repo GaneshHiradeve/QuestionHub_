@@ -1,11 +1,11 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer } from "@reduxjs/toolkit";
 
-export const server = 'http://localhost:8000';
+export const server = "http://localhost:8000";
 
 export const userReducer = createReducer(
   {},
   {
-    userloginRequest: state => {
+    userloginRequest: (state) => {
       state.loading = true;
     },
     userloginSuccess: (state, action) => {
@@ -20,11 +20,7 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-    
-
-    
-
-    getuserprofile: state => {
+    getuserprofile: (state) => {
       state.loading = true;
     },
     getuserprofileSuccess: (state, action) => {
@@ -38,7 +34,7 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-    logoutuser: state => {
+    logoutuser: (state) => {
       state.loading = true;
     },
 
@@ -54,9 +50,7 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-    
-
-    userRegisterRequest: state => {
+    userRegisterRequest: (state) => {
       state.loading = true;
     },
     userRegisterSuccess: (state, action) => {
@@ -71,8 +65,7 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-
-    usercreatepostRequest: state => {
+    usercreatepostRequest: (state) => {
       state.loading = true;
     },
     usercreatepostSuccess: (state, action) => {
@@ -88,49 +81,33 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-
-    
-    usergetallpostRequest: state => {
+    usergetallpostRequest: (state) => {
       state.loading = true;
     },
     usergetallpostSuccess: (state, action) => {
       state.loading = false;
       state.isAuthenticated = true;
       state.allData = action.payload.allData;
-      
     },
     usergetallpostFail: (state, action) => {
       state.loading = false;
       state.isAuthenticated = false;
-      
     },
 
-
-
-    userpostRequest: state => {
+    userpostRequest: (state) => {
       state.loading = true;
     },
     userpostRequestSuccess: (state, action) => {
       state.loading = false;
       state.isAuthenticated = true;
       state.userpost = action.payload.userpost;
-      
-      
     },
     userpostRequestFail: (state, action) => {
       state.loading = false;
       state.isAuthenticated = false;
-      
     },
 
-
-
-
-
-
-
-    
-    alluserdataRequest: state => {
+    alluserdataRequest: (state) => {
       state.loading = true;
     },
     alluserdataSuccess: (state, action) => {
@@ -145,8 +122,7 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-
-    usercommentRequest: state => {
+    usercommentRequest: (state) => {
       state.loading = true;
     },
     usercommentSuccess: (state, action) => {
@@ -161,53 +137,41 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-
-    
-    
-    getcategoryRequest: state => {
+    getcategoryRequest: (state) => {
       state.loading = true;
     },
     getcategorySuccess: (state, action) => {
       state.loading = false;
       state.isAuthenticated = true;
       state.categorydata = action.payload.categorydata;
-      
-      
-      
     },
     getcategoryFail: (state, action) => {
       state.loading = false;
       state.isAuthenticated = false;
-      
     },
 
     // questionid
-   
-    getlikeRequest: state => {
+
+    getlikeRequest: (state) => {
       state.loading = true;
     },
     getlikeSuccess: (state, action) => {
       state.loading = false;
       state.like1 = action.payload.like1;
       state.totallength = action.payload.totallength;
-      state.message=action.payload.message
-      
+      state.message = action.payload.message;
     },
     getlikeFail: (state, action) => {
       state.loading = false;
       state.error = action.payload;
-
     },
 
-
-
-    cleanError: state => {
+    cleanError: (state) => {
       state.error = null;
     },
 
-    cleanMessage: state => {
+    cleanMessage: (state) => {
       state.message = null;
     },
   }
 );
-

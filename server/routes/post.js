@@ -19,10 +19,4 @@ postRouter.get('/user/:category',isAuthenticated,getcategoryData)
 postRouter.post('/user/reply/:id',isAuthenticated,commentonPost)
 postRouter.get('/user/replytopost/:id',isAuthenticated,getallreplytoPost)
 
-
-
-
-
-
-
 export default postRouter;
