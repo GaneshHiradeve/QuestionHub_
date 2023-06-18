@@ -113,8 +113,52 @@ export const CreatePost = (description,categories) => async dispatch => {
     
       dispatch({ type:'getlikeSuccess', payload: data });
     } catch (err) {
-       console.log("error response ok",err.response)
-       console.log("error response",err.response.data)
+      
       dispatch({ type:'getlikeFail', payload: err.response.data.message });
     }
   };
+
+
+  export const getpostReport = (id) => async dispatch => {
+    try {
+     
+      dispatch({ type:'getreportRequest'});
+     
+      const { data } = await axios.get(
+        `${server}/report/${id}`,
+           
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          withCredentials: true,
+        }
+      );
+    
+      dispatch({ type:'getreportSuccess', payload: data });
+    } catch (err) {
+      
+      dispatch({ type:'getreportFail', payload: err.response.data.message });
+    }
+  };
+
+  // deletepostRequest
+
+
+  export const deleteuserPost=(id)=>async(dispatch)=>{
+     
+    try{
+             dispatch({type:'deletepostRequest'});
+  
+             const {data}=await axios.delete(`${server}/deletepost/${id}`,{
+                 headers:{
+                        "Content-Type":"application/json",
+                 },
+                 withCredentials:true,
+             })
+          dispatch({type:'deletepostSuccess',payload:data})
+    }catch(err){
+     dispatch({type:'deletepostFail',payload:err.response.data.message})
+  
+    }
+  }

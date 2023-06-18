@@ -1,6 +1,6 @@
 import express from "express";
 import { isAuthenticated } from "../middlewares/auth.js";
-import { commentonPost, countLike, createPost, downVote, getallPost, getallPostdata, getallreplytoPost, getcategoryData,upVote } from "../controllers/post.js";
+import { ReportonPost, commentonPost, countLike, createPost, deletePost, downVote, getallPost, getallPostdata, getallreplytoPost, getcategoryData,upVote } from "../controllers/post.js";
 
 const postRouter=express.Router();
 
@@ -13,6 +13,10 @@ postRouter.put('/downvote/:id',isAuthenticated,downVote);
 postRouter.post('/comment/:id',isAuthenticated,commentonPost);
 
 postRouter.get('/like/:id',isAuthenticated,countLike)
+postRouter.get('/report/:id',isAuthenticated,ReportonPost)
+postRouter.delete('/deletepost/:id',isAuthenticated,deletePost)
+
+
 
 // filters
 postRouter.get('/user/:category',isAuthenticated,getcategoryData)

@@ -46,7 +46,7 @@ function Register() {
           />  
            </div>
 
-<div className="inputbox">
+<div className="inputboxr">
 
           <input
             type="password"

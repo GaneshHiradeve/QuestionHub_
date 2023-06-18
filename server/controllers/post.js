@@ -52,7 +52,7 @@ export const getallPost = async (req, res) => {
   });
 };
 
-export const getallPostdata = async (req, res) => {
+export const  getallPostdata = async (req, res) => {
   const allData = await Post.find({}).sort({ likes: -1 });
 
   res.status(201).json({
@@ -131,9 +131,60 @@ export const countLike = async (req, res) => {
     await post.save();
 
     res.status(200).json({
-      message: "like remove",
+      message: "like removed",
       like1: 0,
       totallength: post.likes.length,
     });
   }
 };
+
+
+export const ReportonPost = async (req, res) => {
+  const id = req.params.id;
+  const uid = req.user._id;
+
+  const post = await Post.findById(id);
+
+  const check = await post.reports.includes(uid);
+  if (!check) {
+    post.reports.push(uid);
+
+    await post.save();
+
+    res.status(200).json({
+      message: "report done",
+      report: 1,
+      reportlength: post.reports.length,
+    });
+  } else {
+    post.reports.pop(uid);
+
+    await post.save();
+
+    res.status(200).json({
+      message: "report removed",
+      report: 0,
+      reportlength: post.reports.length,
+    });
+  }
+};
+
+export const deletePost = async (req, res) => {
+  const id = req.params.id;
+  
+   
+  const post = await Post.findById(id);
+
+  if(!post) return res.status(404).json({
+    success:"false",
+    message:"Post not found"
+})
+
+  await post.deleteOne();
+
+  res.status(201).json({
+    success: true,
+    message: "Post deleted successfully",
+  });
+};
+

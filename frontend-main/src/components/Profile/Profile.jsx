@@ -6,10 +6,7 @@ import { userLogout } from "../redux/action/user";
 function Profile({userdata,userpost}) {
     const createdate=new Date(userdata.CreateAt);
 
-    const dispatch=useDispatch();
-    const userlogout=()=>{
-        dispatch(userLogout())
-    }
+   
    
   
   return (
@@ -23,16 +20,7 @@ function Profile({userdata,userpost}) {
 
 
            
-            <div className="profile-card-ctr">
-              <button
-                className="profile-card__button button--blue js-message-btn" 
-              >
-                Message
-              </button>
-              <button className="profile-card__button button--orange" onClick={userlogout}>
-                Logout
-              </button>
-            </div>
+           
           </div>
         
     </>

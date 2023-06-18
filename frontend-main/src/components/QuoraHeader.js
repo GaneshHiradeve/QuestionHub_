@@ -26,12 +26,16 @@ import { Link } from "react-router-dom";
 import user1 from "./img/user.jpg";
 import Avatarmodal from "./Avatarmodal";
 import ReactQuill from "react-quill";
+import { Tooltip } from "@mui/material";
+import { userLogout } from "./redux/action/user";
 
 function QuoraHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { user } = useSelector((state) => state.user);
+  console.log(user)
   // description,categories
   const [selction_cate, setselction_cate] = useState("sport");
+  
 
   const [description, setDescription] = useState("");
   const [categories, setCategories] = useState("sport");
@@ -59,7 +63,10 @@ function QuoraHeader() {
       setDescription("")
     }
   };
-
+  const userlogout=()=>{
+    dispatch(userLogout())
+}
+const usernameslice=user.name.slice(0,6);
   return (
     <div className="qHeader">
       <div className="qHeader-content">
@@ -68,27 +75,42 @@ function QuoraHeader() {
 
        
         <div className="logoname">
-         <h4>Logo</h4>
+         <h4>Quora</h4>
         </div>
        
         <div className="qHeader__icons">
           <Link to={"/header"}>
             <div className="qHeader__icon">
+              <Tooltip title="Home" placement="bottom">
               <HomeIcon />
+              </Tooltip>
             </div>
           </Link>
 
           <Link to={"/dashboard"}>
             <div className="qHeader__icon">
-              <FeaturedPlayListIcon />
+             
+
+              <Tooltip title="Dashboard" placement="bottom">
+       <FeaturedPlayListIcon />
+              </Tooltip>
             </div>
           </Link>
 
+
+       <Link to={'/admindash'}>
           <div className="qHeader__icon">
-            <AssignmentTurnedInIcon />
+            
+            <Tooltip title="Assign" placement="bottom">
+      <AssignmentTurnedInIcon />
+              </Tooltip>
           </div>
+          </Link>
           <div className="qHeader__icon">
-            <PeopleAltIcon />
+            
+            <Tooltip title="People" placement="bottom">
+      <PeopleAltIcon />
+              </Tooltip>
           </div>
           
        
@@ -104,8 +126,15 @@ function QuoraHeader() {
             className="qHeader__Avatarcom"
             userdata={user}
           />
-
+    <div className="qHeader__icon" style={{
+      color:'rgb(115, 203, 250)'
+    }}>
+    {usernameslice}..
+    </div>
           <Button onClick={() => setIsModalOpen(true)}>Post</Button>
+          <Button onClick={userlogout} >
+                Logout
+              </Button>
         </div>
         </div>
         <Modal
@@ -187,7 +216,7 @@ function QuoraHeader() {
                 className="add"
                 onClick={() => setIsModalOpen(false)}
               >
-                Add Question
+                Post
               </button>
             </div>
           </form>
