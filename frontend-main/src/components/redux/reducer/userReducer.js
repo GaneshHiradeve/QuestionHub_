@@ -150,14 +150,7 @@ export const userReducer = createReducer(
       state.isAuthenticated = false;
     },
 
-    // questionid
-<<<<<<< HEAD
-
     getlikeRequest: (state) => {
-=======
-    // /report/  
-    getlikeRequest: state => {
->>>>>>> b46834cc4a96b36a2ed59f3cd3e0e5a8bba57404
       state.loading = true;
     },
     getlikeSuccess: (state, action) => {
@@ -171,45 +164,33 @@ export const userReducer = createReducer(
       state.error = action.payload;
     },
 
-<<<<<<< HEAD
-    cleanError: (state) => {
-=======
-
-    getreportRequest: state => {
+    getreportRequest: (state) => {
       state.loading = true;
     },
     getreportSuccess: (state, action) => {
       state.loading = false;
       state.report = action.payload.like1;
       state.reportlength = action.payload.totallength;
-      state.message=action.payload.message
-      
+      state.message = action.payload.message;
     },
     getreportFail: (state, action) => {
       state.loading = false;
       state.error = action.payload;
-
     },
 
-    deletepostRequest: state => {
+    deletepostRequest: (state) => {
       state.loading = true;
     },
     deletepostSuccess: (state, action) => {
       state.loading = false;
-     
-      state.message=action.payload.message
-      
+      state.message = action.payload.message;
     },
     deletepostFail: (state, action) => {
       state.loading = false;
       state.error = action.payload;
-
     },
 
-
-
-    cleanError: state => {
->>>>>>> b46834cc4a96b36a2ed59f3cd3e0e5a8bba57404
+    cleanError: (state) => {
       state.error = null;
     },
 

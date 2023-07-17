@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Userpost = () => {
-  return (
-    <div>
-      Hello everyone
-    </div>
-  )
-}
+  return <div>Hello everyone</div>;
+};
 
-export default Userpost
+export default Userpost;

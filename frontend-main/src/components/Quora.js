@@ -4,11 +4,10 @@ import "./css/Quora.css";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
 import Widget from "./Widget";
-function Quora({allData}) {
-  
+
+function Quora({ allData }) {
   return (
     <div className="quora">
-      
       <QuoraHeader />
       <div className="quora__contents">
         <div className="quora__content">

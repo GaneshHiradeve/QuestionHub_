@@ -1,10 +1,5 @@
-import React, { useState } from 'react'
-import { Chart as ChartJS } from 'chart.js/auto'; 
-
-import { Line } from 'react-chartjs-2';
-import { useSelector } from 'react-redux';
-import Additem from './Additem';
-
+import React from "react";
+import Additem from "./Additem";
 
 // export const options = {
 //     responsive: true,
@@ -35,29 +30,23 @@ import Additem from './Additem';
 
 // }
 
-
-
-const AdminDash = ({userData}) => {
-    console.log(userData)
+const AdminDash = ({ userData }) => {
+  console.log(userData);
   return (
     <div>
-       <div className="feed">
-      {/* <QuoraBox /> */}
-      {/* {posts.map((post, index) => (
+      <div className="feed">
+        {/* <QuoraBox /> */}
+        {/* {posts.map((post, index) => (
         <Post key={index} post={post} />
       ))} */}
 
-{ userData &&
+        {userData &&
           userData.map((data, index) => {
-         
-            return <Additem key={index} data={data}  />;
+            return <Additem key={index} data={data} />;
           })}
-      
-      
+      </div>
     </div>
-  
-    </div>
-  )
-}
+  );
+};
 
-export default AdminDash
+export default AdminDash;

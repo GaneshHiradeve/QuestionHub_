@@ -9,7 +9,6 @@ function Widget() {
       </div>
       <div className="widget__contents">
         <WidgetContent />
-        
       </div>
     </div>
   );
