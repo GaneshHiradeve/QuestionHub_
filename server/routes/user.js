@@ -10,6 +10,4 @@ Router.get('/logout',userLogout); //TODO
 Router.get('/profile',isAuthenticated,userprofile);
 
 
-
-
 export default Router;
