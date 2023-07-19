@@ -29,7 +29,7 @@ app.use(cors({
 app.use(Router)
 app.use(postRouter)
 
-mongoose.connect(process.env.URL)
+mongoose.connect(process.env.URL,{useNewUrlParser:true})
 .then(console.log("DB Connected"))
 .catch((err)=>console.log(err))
 

@@ -60,9 +60,10 @@ function QuoraHeader() {
   return (
     <div className="qHeader">
       <div className="qHeader-content">
-        <div className="qHeader__logo"></div>
-        <div className="logoname">
-          <h4>Quora</h4>
+        <div className="qHeader__logo">
+          <div className="logoname">
+            <h4>Quora</h4>
+          </div>
         </div>
         <div className="qHeader__icons">
           <Link to={"/header"}>
