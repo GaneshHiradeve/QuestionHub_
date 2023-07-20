@@ -16,6 +16,8 @@ import {
   getpostReport,
 } from "./redux/action/post";
 
+import user1 from "./img/profile.png";
+
 function Post({ data, like }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const mydata = new Date(data.createdAt);
@@ -40,7 +42,7 @@ function Post({ data, like }) {
   return (
     <div className="post">
       <div className="post__info">
-        <Avatar src={user} />
+        <Avatar src={user1} />
         <h3 className="user_name">{data.name}</h3>
         <small>
           {mydata.getDate()}/{mydata.getMonth()}/{mydata.getFullYear()}

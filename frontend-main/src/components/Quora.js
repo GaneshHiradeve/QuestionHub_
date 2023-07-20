@@ -10,11 +10,11 @@ function Quora({ allData }) {
     <div className="quora">
       <QuoraHeader />
       <div className="quora__contents">
-        <div className="quora__content">
+        
           <Sidebar />
           <Feed allData={allData} />
           <Widget allData={allData} />
-        </div>
+        
       </div>
     </div>
   );

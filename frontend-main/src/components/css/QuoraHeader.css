@@ -1,7 +1,9 @@
 .qHeader {
   /* display: flex;
   align-items: center; */
-  background-color: black;
+  background-color: #fff;
+  position: sticky;
+  color: #000;
   /* position: relative; */
   z-index: 1000;
   top: 0px;
@@ -14,27 +16,30 @@
 .qHeader-content {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0 2rem;
   width: 100%;
   /* margin-left: 190px; */
   /* margin-right: auto; */
   /* padding: 5px; */
 }
-.qHeader__logo{
+/* .qHeader__logo{
   justify-content: flex-start;
-}
+} */
 
 .qHeader__icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 5px;
+  width: 52%;
   /* margin-left: -25px; */
   position: relative !important;
 }
 
 .logoname {
   margin-left: 1rem;
-  color: #fff;
+  color: rgb(20, 15, 15);
+  font-size: 1.5rem;
   font-weight: bold !important;
 }
 
@@ -57,21 +62,21 @@
 }
 
 .qHeader__icon>.MuiSvgIcon-root {
-  color: rgb(115, 203, 250);
+  color: #000;
   font-size: xx-large;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 .qHeader__icon:hover>.MuiSvgIcon-root {
-  color: #000;
+  color: #666;
 }
 
 .qHeader__input {
   display: flex !important;
   align-items: center !important;
   text-align: center !important;
-  border: 1px solid rgb(115, 203, 250) !important;
+  border: 1px solid rgb(0, 0, 0) !important;
   padding: 5px !important;
   border-radius: 18px !important;
   margin-left: 10px !important;
@@ -87,15 +92,15 @@
   background-color: transparent;
   outline: none;
   border: none;
-  color: rgb(115, 203, 250);
+  color: #000;
 }
 
 .inputsearch ::placeholder {
-  color: rgb(115, 203, 250);
+  color: rgb(0, 0, 0);
 }
 
 .qHeader__input>.MuiSvgIcon-root {
-  color: rgb(115, 203, 250);
+  color: rgb(55, 54, 54);
 }
 
 .qHeader__avatar {
@@ -103,6 +108,7 @@
   padding: 0px 0px 100px;
 
 }
+
 
 /* .qHeader__Avatarcom{
   margin-left: 100px;
@@ -116,7 +122,7 @@
 
 .qHeader__Rem>.MuiSvgIcon-root {
   font-size: xx-large;
-  color: rgb(115, 203, 250);
+  color: rgb(0, 0, 0);
   margin-left: 200px;
   cursor: pointer;
   align-self: right;
@@ -127,16 +133,16 @@
 }
 
 .qHeader__Rem>.MuiButton-root {
-  color: rgb(115, 203, 250);
-  background: #222;
+  color: #fff;
+  background: #000;
   text-transform: inherit;
   border-radius: 5px;
   margin-left: 25px;
 }
 
 .qHeader__Rem>.MuiButton-root:hover {
-  color: #222;
-  background: rgb(115, 203, 250);
+  color: rgb(255, 255, 255);
+  background: #666;
 }
 
 .modal__title {

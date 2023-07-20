@@ -18,7 +18,7 @@ function Widget({ allData }) {
         {data ? (
           <p
             style={{
-              color: "rgb(208 208 208)",
+              color: "#000",
               margin: "7px 5px",
               fontSize: "13px",
             }}
@@ -32,7 +32,7 @@ function Widget({ allData }) {
         {data ? (
           <p
             style={{
-              color: "rgb(208 208 208)",
+              color: "#000",
               margin: "7px 5px",
               fontSize: "13px",
             }}
@@ -46,7 +46,7 @@ function Widget({ allData }) {
         {data ? (
           <p
             style={{
-              color: "rgb(208 208 208)",
+              color: "#000",
               margin: "7px 5px",
               fontSize: "13px",
             }}
@@ -60,7 +60,7 @@ function Widget({ allData }) {
         {data ? (
           <p
             style={{
-              color: "rgb(208 208 208)",
+              color: "#000",
               margin: "7px 5px",
               fontSize: "13px",
             }}
