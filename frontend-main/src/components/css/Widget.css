@@ -1,14 +1,17 @@
 .widget {
-  flex: 0.2;
-  margin-left: 20px;
-  display: flex;
+  /* flex: 0.2; */
+  width: 13rem;
+  /* margin-right: 2rem; */
+  /* display: flex; */
   margin-top: 12px;
-  flex-direction: column;
-  margin-right: 20px;
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  /* padding: 0 0 5rem 0; */
+  /* margin-right: 20px; */
   border: 1px solid lightgray;
   border-radius: 5px;
   height: fit-content;
-  background-color: black;
+  background-color: #fff;
 
 }
 
@@ -18,7 +21,7 @@
 
 .widget__header > h5 {
   padding: 10px;
-  color: white;
+  color: #000;
   font-size: 15px;
   letter-spacing: 1.1px;
 }

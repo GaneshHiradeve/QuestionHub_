@@ -5,7 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Avatar from "@mui/material/Avatar";
 import { useSelector } from "react-redux";
 
-import user from "./img/user.jpg";
+import user from "./img/profile.png";
 
 function Avatarmodal({ userdata }) {
   const { userpost } = useSelector((state) => state.user);

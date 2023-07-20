@@ -21,7 +21,7 @@ import Input from "@mui/material/Input";
 import CloseIcon from "@mui/icons-material/Close";
 import Avatarmodal from "./Avatarmodal";
 
-import user1 from "./img/user.jpg";
+import user1 from "./img/profile.png";
 
 function QuoraHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,7 +66,7 @@ function QuoraHeader() {
           </div>
         </div>
         <div className="qHeader__icons">
-          <Link to={"/header"}>
+          <Link to={"/home"}>
             <div className="qHeader__icon">
               <Tooltip title="Home" placement="bottom">
                 <HomeIcon />
@@ -96,23 +96,27 @@ function QuoraHeader() {
             <SearchIcon />
             <input type="text" placeholder="Search Questions" />
           </div>
-          <div className="qHeader__Rem">
-            <Avatarmodal
-              src={user1}
-              className="qHeader__Avatarcom"
-              userdata={user}
-            />
-            <div
-              className="qHeader__icon"
-              style={{
-                color: "rgb(115, 203, 250)",
-              }}
-            >
-              {usernameslice}..
-            </div>
-            <Button onClick={() => setIsModalOpen(true)}>Post</Button>
-            <Button onClick={userlogout}>Logout</Button>
+          
+        </div>
+        <div className="qHeader__Rem">
+          <Avatarmodal
+            // style={{ color: "green" }}
+            src={user1}
+            className="qHeader__Avatarcom"
+            userdata={user}
+            
+          />
+          <div
+            className="qHeader__icon"
+            style={{
+              color: "#000",
+              fontWeight: "700"
+            }}
+          >
+            {usernameslice}..
           </div>
+          <Button className="headerButton" onClick={() => setIsModalOpen(true)}>Post</Button>
+          <Button className="headerButton" onClick={userlogout}>Logout</Button>
         </div>
         <Modal
           open={isModalOpen}

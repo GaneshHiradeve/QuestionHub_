@@ -4,13 +4,14 @@ import Quora from "./components/Quora.js";
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import { ProtectedRoute } from "protected-route-react";
 import "react-toastify/dist/ReactToastify.css";
 import { getuserProfile } from "./components/redux/action/user";
 import Swal from "sweetalert2";
 import { getallPost, getuserPost } from "./components/redux/action/post";
 import AdminDash from "./components/dashboard/AdminDash";
+import { ClassNames } from "@emotion/react";
 
 // import Userpost from "./components/Userpost";
 // import { toast } from "react-toastify";
@@ -54,7 +55,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
+    <Fragment >
       <Router>
         <Routes>
           <Route
@@ -62,7 +63,7 @@ function App() {
             element={
               <ProtectedRoute
                 isAuthenticated={!isAuthenticated}
-                redirect="/header"
+                redirect="/home"
               >
                 <Register />
               </ProtectedRoute>
@@ -73,7 +74,7 @@ function App() {
             element={
               <ProtectedRoute
                 isAuthenticated={!isAuthenticated}
-                redirect="/header"
+                redirect="/home"
               >
                 <Login />
               </ProtectedRoute>
@@ -84,14 +85,14 @@ function App() {
             element={
               <ProtectedRoute
                 isAuthenticated={!isAuthenticated}
-                redirect="/header"
+                redirect="/home"
               >
                 <Register />
               </ProtectedRoute>
             }
           />
           <Route
-            path="/header"
+            path="/home"
             element={
               <ProtectedRoute
                 isAuthenticated={isAuthenticated}
@@ -194,7 +195,7 @@ function App() {
                 adminRoute={true}
                 isAdmin={user && user.role === "admin"}
                 isAuthenticated={isAuthenticated}
-                redirect="/header"
+                redirect="/home"
               >
                 <AdminDash userData={allData} />
               </ProtectedRoute>
@@ -202,7 +203,7 @@ function App() {
           />
         </Routes>
       </Router>
-    </>
+    </Fragment>
   );
 }
 
