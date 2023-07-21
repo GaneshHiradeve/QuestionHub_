@@ -94,7 +94,7 @@ function QuoraHeader() {
           </div>
           <div className="qHeader__input">
             <SearchIcon />
-            <input type="text" placeholder="Search Questions" />
+            <input type="text" placeholder="Search Questions" style={{textAlign: "start"}}  />
           </div>
         </div>
         <div className="qHeader__Rem">

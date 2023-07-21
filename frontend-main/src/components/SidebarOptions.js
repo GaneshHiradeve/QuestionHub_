@@ -6,11 +6,13 @@ import food from "./img/food.jpg";
 import echo from "./img/economics.jpg";
 import politics from "./img/politics.jpg";
 import sport from "./img/sport.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getpostCategory } from "./redux/action/post";
+import {Activity, BadgeDollarSign, Laptop2, Siren, Soup, Trophy} from 'lucide-react'
 
 function SidebarOptions() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const CategoryHandler = (e, category) => {
     e.preventDefault();
@@ -18,75 +20,94 @@ function SidebarOptions() {
   };
   return (
     <div className="sidebarOptions">
-      <div
-        className="sidebarOption"
-        onClick={(e) => {
-          CategoryHandler(e, "technology");
-        }}
-      >
-        <img src={Tech} alt="" />
-        <Link to={"/technology"} style={{ textDecoration: "none" }}>
+
+      <Link to={"/technology"} style={{ textDecoration: "none" }}>
+        <div
+          className="sidebarOption "
+          onClick={(e) => {
+            CategoryHandler(e, "technology");
+            navigate('/technology')
+          }}
+        >
+        
+          <Laptop2 size={25} color="#222" strokeWidth={2} />
           <h5 style={{ marginLeft: "10px", color: "black" }}>Technology</h5>
-        </Link>
-      </div>
-      <div
-        className="sidebarOption"
-        onClick={(e) => {
-          CategoryHandler(e, "lifestyle");
-        }}
-      >
-        <img src={lifestyle} alt="" />
-        <Link to={"/lifestyle"} style={{ textDecoration: "none" }}>
+          
+        </div>
+      </Link>
+
+
+      <Link to={"/lifestyle"} style={{ textDecoration: "none" }}>
+        <div
+          className="sidebarOption"
+          onClick={(e) => {
+            CategoryHandler(e, "lifestyle");
+            navigate('/lifestyle')
+          }}
+        >
+          <Activity size={25} color="#222" strokeWidth={2}/>
           <h5 style={{ marginLeft: "10px", color: "black" }}>Lifestyle</h5>
-        </Link>
-      </div>
-      <div
-        className="sidebarOption"
-        onClick={(e) => {
-          CategoryHandler(e, "politics");
-        }}
-      >
-        <img src={politics} alt="" />
-        <Link to={"/politics"} style={{ textDecoration: "none" }}>
-          <h5 style={{ marginLeft: "10px", color: "black" }}>Politics</h5>
-        </Link>
-      </div>
+          
+        </div>
+      </Link>
 
-      <div
-        className="sidebarOption"
-        onClick={(e) => {
-          CategoryHandler(e, "food");
-        }}
-      >
-        <img src={food} alt="" />
-        <Link to={"/food"} style={{ textDecoration: "none" }}>
+
+      <Link to={"/politics"} style={{ textDecoration: "none" }}>
+        <div
+          className="sidebarOption"
+          onClick={(e) => {
+            CategoryHandler(e, "politics");
+            navigate('/politics')
+          }}
+        >
+          <Siren size={25} color="#222" strokeWidth={2}/>
+          <h5 style={{ marginLeft: "10px", color: "black" }}>Politics</h5> 
+        
+        </div>
+      </Link>
+
+      <Link to={"/food"} style={{ textDecoration: "none" }}>
+        <div
+          className="sidebarOption"
+          onClick={(e) => {
+            CategoryHandler(e, "food");
+            navigate('/food')
+          }}
+        >
+          <Soup size={25} color="#222" strokeWidth={2}/>
           <h5 style={{ marginLeft: "10px", color: "black" }}>Food</h5>
-        </Link>
-      </div>
+          
+        </div>
+      </Link>
 
-      <div
-        className="sidebarOption"
-        onClick={(e) => {
-          CategoryHandler(e, "economics");
-        }}
-      >
-        <img src={echo} alt="" />
-        <Link to={"/economics"} style={{ textDecoration: "none" }}>
+      <Link to={"/economics"} style={{ textDecoration: "none" }}>
+        <div
+          className="sidebarOption"
+          onClick={(e) => {
+            CategoryHandler(e, "economics");
+            navigate('/economics')
+          }}
+        >
+          <BadgeDollarSign size={25} color="#222" strokeWidth={2}/>
           <h5 style={{ marginLeft: "10px", color: "black" }}>Economics</h5>
-        </Link>
-      </div>
+          
+        </div>
+      </Link>
 
-      <div
-        className="sidebarOption"
-        onClick={(e) => {
-          CategoryHandler(e, "sport");
-        }}
-      >
-        <img src={sport} alt="" />
-        <Link to={"/sport"} style={{ textDecoration: "none" }}>
+
+      <Link to={"/sport"} style={{ textDecoration: "none" }}>
+        <div
+          className="sidebarOption"
+          onClick={(e) => {
+            CategoryHandler(e, "sport");
+            navigate('/sport')
+          }}
+        > 
+          <Trophy size={25} color="#222" strokeWidth={2} /> 
           <h5 style={{ marginLeft: "10px", color: "black" }}>Sport</h5>
-        </Link>
-      </div>
+          
+        </div>
+      </Link>
     </div>
   );
 }

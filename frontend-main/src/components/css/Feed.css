@@ -1,7 +1,22 @@
 .feed {
+  display: flex;
+  flex-direction: column;
+  /* flex: 0.6; */
+  width: 50rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  .widget {
+    display: none !important;
+  }
+
+  .feed {
     display: flex;
     flex-direction: column;
     /* flex: 0.6; */
-    width: 50rem;
-    justify-content: center;
+    margin-left: 14rem;
+    width: 30rem;
+    /* justify-content: space-between; */
   }
+}

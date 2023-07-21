@@ -9,12 +9,14 @@ function Quora({ allData }) {
   return (
     <div className="quora">
       <QuoraHeader />
-      <div className="quora__contents">
-        
-          <Sidebar />
+      <div className="main">
+        <Sidebar />
+        <div className="quora__contents">
+          
           <Feed allData={allData} />
           <Widget allData={allData} />
-        
+          
+        </div>
       </div>
     </div>
   );

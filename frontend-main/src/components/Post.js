@@ -165,11 +165,10 @@ function Post({ data, like }) {
             }}
             className="post-answered"
           >
-            {/* <Avatar /> */}
           </div>
           <div className="post-answer">This is Test answer</div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
