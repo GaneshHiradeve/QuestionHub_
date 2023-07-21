@@ -3,15 +3,18 @@
   min-width: fit-content;
   background-color: #DAE0E6;
 }
+.main{
+  display: flex;
 
+}
 .quora__contents {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  /* margin-right: 4rem; */
   padding: 0 5rem 0 0 ;
   background-color: rgba(0, 0, 0, 0.05);
   min-width: fit-content;
   width: 100%;
-
 }
 
 .quora__content {
@@ -43,4 +46,31 @@
   .quora__content {
     justify-content: space-around;
 }
+}
+
+
+@media only screen and (max-width:1350px) {
+  .widget {
+    display: none !important;
+  }
+
+  .quora__content {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width:1150px) {
+  .widget {
+    display: none ;
+  }
+
+  .quora__contents {
+    /* display: flex; */
+    justify-content: space-evenly;
+    margin-left: 10vw;
+    /* padding: 0 5rem 0 0 ; */
+    background-color: rgba(0, 0, 0, 0.05);
+    min-width: fit-content;
+    width: 100%;
+  }
 }

@@ -178,7 +178,7 @@ function Post({ data, like }) {
             }}
             className="post-answered"
           >
-            <Avatar />
+            {/* <Avatar />
             <div
               style={{
                 margin: "0px 10px",
@@ -187,11 +187,11 @@ function Post({ data, like }) {
             >
               <p>Username</p>
               <span>Timestamp</span>
-            </div>
+            </div> */}
           </div>
           <div className="post-answer">This is Test answer</div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
