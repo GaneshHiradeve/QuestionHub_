@@ -1,6 +1,6 @@
 import { Comment } from "../models/comment.js";
 import { Post } from "../models/post.js";
-import { User } from "../models/user.js";
+// import { User } from "../models/user.js";
 
 export const createPost = async (req, res) => {
   const { description, categories } = req.body;
@@ -14,7 +14,7 @@ export const createPost = async (req, res) => {
 
   res.status(200).json({
     success: true,
-    message: "Post done",
+    message: "Post Done",
     post: post,
   });
 };
@@ -96,7 +96,7 @@ export const countLike = async (req, res) => {
     post.likes.push(uid);
     await post.save();
     res.status(200).json({
-      message: "like done",
+      message: "Like Done",
       like1: 1,
       totallength: post.likes.length,
     });
@@ -104,7 +104,7 @@ export const countLike = async (req, res) => {
     post.likes.pop(uid);
     await post.save();
     res.status(200).json({
-      message: "like removed",
+      message: "Like Removed",
       like1: 0,
       totallength: post.likes.length,
     });
@@ -120,7 +120,7 @@ export const ReportonPost = async (req, res) => {
     post.reports.push(uid);
     await post.save();
     res.status(200).json({
-      message: "report done",
+      message: "Report Done",
       report: 1,
       reportlength: post.reports.length,
     });
@@ -128,7 +128,7 @@ export const ReportonPost = async (req, res) => {
     post.reports.pop(uid);
     await post.save();
     res.status(200).json({
-      message: "report removed",
+      message: "Report Removed",
       report: 0,
       reportlength: post.reports.length,
     });
@@ -141,11 +141,11 @@ export const deletePost = async (req, res) => {
   if (!post)
     return res.status(404).json({
       success: "false",
-      message: "Post not found",
+      message: "Post Not Nound",
     });
   await post.deleteOne();
   res.status(201).json({
     success: true,
-    message: "Post deleted successfully",
+    message: "Post Deleted Successfully",
   });
 };

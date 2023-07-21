@@ -11,7 +11,7 @@ import "react-responsive-modal/styles.css";
 import "./css/QuoraHeader.css";
 
 import HomeIcon from "@mui/icons-material/Home";
-import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+// import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
@@ -20,6 +20,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Avatarmodal from "./Avatarmodal";
 
 import user1 from "./img/profile.png";
+import logo from "./img/logo.png";
 
 function QuoraHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,9 +62,12 @@ function QuoraHeader() {
     <div className="qHeader">
       <div className="qHeader-content">
         <div className="qHeader__logo">
-          <div className="logoname">
-            <h4>Quora</h4>
-          </div>
+          <Link to={"/home"} style={{textDecoration: 'none', color: 'rgb(0,0,0)'}}>
+            <div className="logoname">
+              <img src={logo} alt="" />
+              <h5>Discussify</h5>
+            </div>
+          </Link>
         </div>
         <div className="qHeader__icons">
           <Link to={"/home"}>
@@ -87,11 +91,11 @@ function QuoraHeader() {
               </Tooltip>
             </div>
           </Link> */}
-          <div className="qHeader__icon">
+          {/* <div className="qHeader__icon">
             <Tooltip title="People" placement="bottom">
               <PeopleAltIcon />
             </Tooltip>
-          </div>
+          </div> */}
           <div className="qHeader__input">
             <SearchIcon />
             <input

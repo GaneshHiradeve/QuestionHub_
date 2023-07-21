@@ -25,6 +25,7 @@
   font-size: 13px;
   color: #e0e0e0;
 }
+
 .post__info > h4:hover {
   text-decoration: underline;
 }
@@ -67,9 +68,11 @@
 #answer:hover {
   color: green;
 }
+
 .chat {
   margin-left: 15px;
 }
+
 .chat:hover {
   color: green;
 }
@@ -80,8 +83,8 @@
   color: rgb(245, 20, 20);
 }
 .post__btnAnswer:hover {
-  color: #e31515;
-  background: lightgray;
+  background-color: #eeeeee;
+  border-radius: 5px;
 }
 
 .post__question > p:hover {
@@ -125,11 +128,21 @@
   justify-content: space-around;
   border-radius: 33px;
 }
+
 .post__footerAction > .MuiSvgIcon-root {
   color: #f7f7f7;
   margin-right: 40px;
   cursor: pointer;
 }
+
+.post__footerAction :hover{
+  color: rgb(0, 255, 4);
+}
+
+.post__footerAction_report :hover{
+  color: rgb(255, 64, 0);
+}
+
 .post__footerAction > .MuiSvgIcon-root:hover {
   color: rgb(0, 140, 255);
   margin-right: 40px;

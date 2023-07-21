@@ -3,10 +3,11 @@ import "./css/Post.css";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import Avatar from "@mui/material/Avatar";
 import ArrowUpwardOutlinedIcon from "@mui/icons-material/ArrowUpwardOutlined";
-import ArrowDownwardOutlinedIcon from "@mui/icons-material/ArrowDownwardOutlined";
+// import ArrowDownwardOutlinedIcon from "@mui/icons-material/ArrowDownwardOutlined";
 import "react-responsive-modal/styles.css";
 import CloseIcon from "@mui/icons-material/Close";
 import { Modal } from "react-responsive-modal";
+import { Tooltip } from "@mui/material";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -90,18 +91,22 @@ function Post({ data, like }) {
           </div>
         </div>
         <h3>{data.likes.length}</h3>
-        <div>
+        &nbsp;&nbsp;
+        {/* <div>
           <ArrowDownwardOutlinedIcon />
         </div>
-        <div
-          className="post__footerAction"
-          onClick={(e) => reportHandler(e, data._id)}
-        >
-          <h5 className="report">
-            <ReportGmailerrorredIcon />
-          </h5>
-        </div>
-        <h3>{data.reports.length}</h3>
+        <h3>{data.likes.length}</h3> */}
+        <Tooltip title="Report" placement="bottom">
+          <div
+            className="post__footerAction_report"
+            onClick={(e) => reportHandler(e, data._id)}
+          >
+            <h5 className="report">
+              <ReportGmailerrorredIcon />
+            </h5>
+          </div>
+        </Tooltip>
+        {/* <h3>{data.reports.length}</h3> */}
         <div style={{}}></div>
         <div className="post__footerLeft">
           <button

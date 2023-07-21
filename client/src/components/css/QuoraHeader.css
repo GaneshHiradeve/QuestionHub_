@@ -15,11 +15,17 @@
   justify-content: space-between;
   padding: 0 2rem;
   width: 100%;
+  text-decoration: none;
 }
 
-/* .qHeader__logo{
-  justify-content: flex-start;
-} */
+.qHeader__logo{
+  text-decoration: none;
+}
+
+.qHeader__logo img{
+  width: 3rem;
+  height: 3rem;
+}
 
 .qHeader__icons {
   display: flex;
@@ -30,10 +36,11 @@
 }
 
 .logoname {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-left: 1rem;
-  color: rgb(20, 15, 15);
-  font-size: 1.5rem;
-  font-weight: bold !important;
+  font-size: large;
 }
 
 @media only screen and (max-width: 800px) {
