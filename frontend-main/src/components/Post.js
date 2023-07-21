@@ -124,7 +124,6 @@ function Post({ data, like }) {
               >
                 Block
               </button>
-
               <button
                 onClick={(e) => deletepostHandler(e, data._id)}
                 className="post__btnAnswer"

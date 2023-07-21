@@ -11,8 +11,7 @@ import { getuserProfile } from "./components/redux/action/user";
 import Swal from "sweetalert2";
 import { getallPost, getuserPost } from "./components/redux/action/post";
 import AdminDash from "./components/dashboard/AdminDash";
-import { ClassNames } from "@emotion/react";
-
+// import { ClassNames } from "@emotion/react";
 // import Userpost from "./components/Userpost";
 // import { toast } from "react-toastify";
 
@@ -40,7 +39,6 @@ function App() {
     if (message) {
       Swal.fire({
         title: message,
-
         icon: "success",
       });
       dispatch({ type: "cleanMessage" });
@@ -55,7 +53,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Fragment >
+    <Fragment>
       <Router>
         <Routes>
           <Route

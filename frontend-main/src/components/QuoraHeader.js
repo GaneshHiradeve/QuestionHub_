@@ -30,7 +30,7 @@ function QuoraHeader() {
   // description,categories
   // const [selction_cate, setselction_cate] = useState("sport");
   const [description, setDescription] = useState("");
-  const [categories, setCategories] = useState("sport");
+  const [categories, setCategories] = useState("");
   const Close = <CloseIcon />;
   const dispatch = useDispatch();
   const PostHandler = (e) => {
@@ -156,12 +156,12 @@ function QuoraHeader() {
                   value={categories}
                   onChange={(e) => setCategories(e.target.value)}
                 >
-                  <option value="sport">Sport</option>
-                  <option value="economics">Economics</option>
                   <option value="technology">Technology</option>
-                  <option value="food">Food</option>
                   <option value="lifestyle">Lifestyle</option>
                   <option value="politics">Politics</option>
+                  <option value="food">Food</option>
+                  <option value="economics">Economics</option>
+                  <option value="sport">Sport</option>
                 </select>
               </label>
             </div>
