@@ -11,13 +11,11 @@ import "react-responsive-modal/styles.css";
 import "./css/QuoraHeader.css";
 
 import HomeIcon from "@mui/icons-material/Home";
-import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
-import Input from "@mui/material/Input";
 import CloseIcon from "@mui/icons-material/Close";
 import Avatarmodal from "./Avatarmodal";
 

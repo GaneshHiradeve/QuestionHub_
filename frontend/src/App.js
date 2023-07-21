@@ -19,7 +19,6 @@ function App() {
   const {
     isAuthenticated,
     message,
-    user,
     error,
     allData,
     userpost,
