@@ -4,9 +4,7 @@ import { User } from "../models/user.js";
 
 export const userRegister = async (req, res) => {
   let { name, email, password, confirmpassword } = req.body;
-
   let user = await User.findOne({ email });
-
   if (user) {
     return res.status(201).json({
       success: true,
@@ -20,20 +18,14 @@ export const userRegister = async (req, res) => {
     });
   }
   password = await bcrypt.hash(password, 10);
-  
-  const role='user';
-
+  const role = "user";
   user = await User.create({
     name,
     email,
     role,
     password,
   });
-
-
-
   const token = jwt.sign({ _id: user._id }, process.env.JWT_TOKEN);
-
   res
     .status(201)
     .cookie("token", token, {
@@ -51,16 +43,13 @@ export const userRegister = async (req, res) => {
 
 export const userLogin = async (req, res) => {
   const { email, password } = req.body;
-
   let user = await User.findOne({ email });
-
   if (!user) {
     return res.status(201).json({
       success: true,
       message: "User Not Exit",
     });
   }
-
   const check = await bcrypt.compare(password, user.password);
   if (!check) {
     return res.status(201).json({
@@ -68,9 +57,7 @@ export const userLogin = async (req, res) => {
       message: "Password Not Match",
     });
   }
-
   const token = jwt.sign({ _id: user._id }, process.env.JWT_TOKEN);
-
   res
     .status(201)
     .cookie("token", token, {
@@ -86,7 +73,7 @@ export const userLogin = async (req, res) => {
     });
 };
 
-export const userLogout = (req,res) => {
+export const userLogout = (req, res) => {
   res
     .status(201)
     .cookie("token", null, {
@@ -101,14 +88,9 @@ export const userLogout = (req,res) => {
     });
 };
 
-export const userprofile=(req,res)=>{
-     
-
+export const userprofile = (req, res) => {
   res.status(200).json({
-      success:true,
-      user:req.user
-  })     
-    
-}
-
-
+    success: true,
+    user: req.user,
+  });
+};

@@ -1,18 +1,10 @@
 .widget {
-  /* flex: 0.2; */
   width: 13rem;
-  /* margin-right: 2rem; */
-  /* display: flex; */
   margin-top: 12px;
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  /* padding: 0 0 5rem 0; */
-  /* margin-right: 20px; */
   border: 1px solid lightgray;
   border-radius: 5px;
   height: fit-content;
   background-color: #fff;
-
 }
 
 .widget__header {
@@ -28,7 +20,6 @@
 
 .widget__contents {
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column;
   gap: 10px;
 }

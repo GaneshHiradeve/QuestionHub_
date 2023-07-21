@@ -17,7 +17,6 @@ body {
   text-align: center;
   padding-bottom: 40px;
   transition: all 0.3s;
- 
 }
 
 .profile-card__name {
@@ -64,7 +63,6 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   margin-top: 35px;
-
 }
 
 .profile-card-inf__item {

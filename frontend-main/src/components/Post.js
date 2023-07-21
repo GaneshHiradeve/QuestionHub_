@@ -23,8 +23,8 @@ function Post({ data, like }) {
   const mydata = new Date(data.createdAt);
   const { user } = useSelector((state) => state.user);
   const Close = <CloseIcon />;
-
   const dispatch = useDispatch();
+
   const upvote1Handler = (e, id) => {
     e.preventDefault();
     dispatch(getpostLike(id));
@@ -33,7 +33,6 @@ function Post({ data, like }) {
     e.preventDefault();
     dispatch(getpostReport(id));
   };
-
   const deletepostHandler = (e, id) => {
     e.preventDefault();
     dispatch(deleteuserPost(id));
@@ -90,13 +89,10 @@ function Post({ data, like }) {
             <ArrowUpwardOutlinedIcon />
           </div>
         </div>
-
         <h3>{data.likes.length}</h3>
-
         <div>
           <ArrowDownwardOutlinedIcon />
         </div>
-
         <div
           className="post__footerAction"
           onClick={(e) => reportHandler(e, data._id)}
@@ -164,11 +160,10 @@ function Post({ data, like }) {
               color: "#888",
             }}
             className="post-answered"
-          >
-          </div>
+          ></div>
           <div className="post-answer">This is Test answer</div>
         </div>
-      </div> 
+      </div>
     </div>
   );
 }

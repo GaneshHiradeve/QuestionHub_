@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: #FFF;
+  background-color: #fff;
   margin-top: 10px;
   border: 1px solid lightgray;
   border-radius: 15px;
@@ -10,22 +10,20 @@
   color: #222;
   box-shadow: 0px 5px 8px -9px solid rgba(0, 0, 0, 0.5);
 }
-.user_name{
+.user_name {
   margin-left: 5px;
 }
 
 .post__info {
   display: flex;
   align-items: center;
-  
 }
 
 .post__info > h4 {
-  /* padding: 5rem; */
   margin-left: 10px;
   cursor: pointer;
   font-size: 13px;
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 .post__info > h4:hover {
   text-decoration: underline;
@@ -33,7 +31,7 @@
 
 .post__info > small {
   margin-left: 10px;
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 
 .post__body {
@@ -50,10 +48,10 @@
   display: flex;
   align-items: center;
   flex: 1;
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
- .post__btnAnswer {
+.post__btnAnswer {
   margin-left: auto;
   cursor: pointer;
   padding: 7px;
@@ -66,20 +64,19 @@
   border-radius: 5px;
 }
 
-#answer:hover{
+#answer:hover {
   color: green;
 }
-.chat{
-  margin-left:15px;
-
+.chat {
+  margin-left: 15px;
 }
-.chat:hover{
+.chat:hover {
   color: green;
 }
-.report{
-  margin-left:10px;
+.report {
+  margin-left: 10px;
 }
-.report:hover{
+.report:hover {
   color: rgb(245, 20, 20);
 }
 .post__btnAnswer:hover {
@@ -129,7 +126,7 @@
   border-radius: 33px;
 }
 .post__footerAction > .MuiSvgIcon-root {
-  color: #F7F7F7;
+  color: #f7f7f7;
   margin-right: 40px;
   cursor: pointer;
 }
@@ -143,7 +140,7 @@
 }
 
 .post__footerLeft > .MuiSvgIcon-root {
-  color: #F7F7F7;
+  color: #f7f7f7;
   cursor: pointer;
   margin-left: 30px;
 }
@@ -156,14 +153,12 @@
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
-  
 }
 
 .modal__question > h1 {
   color: #8f1f1b;
   font-weight: 600;
   margin-bottom: 10px;
-
 }
 
 .modal__question > p {
@@ -212,7 +207,8 @@
 
 .modal__button > .cancle:hover {
   color: red;
-} 
+}
+
 .modal__button > .add {
   border: none;
   outline: none;
@@ -231,7 +227,6 @@
 }
 
 .react-responsive-modal-modal {
-  /* width: 600px; */
   height: 400px;
 }
 

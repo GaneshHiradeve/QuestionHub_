@@ -1,5 +1,4 @@
 import { createReducer } from "@reduxjs/toolkit";
-
 export const server = "http://localhost:8000";
 
 export const userReducer = createReducer(
@@ -19,7 +18,6 @@ export const userReducer = createReducer(
       state.isAuthenticated = false;
       state.error = action.payload;
     },
-
     getuserprofile: (state) => {
       state.loading = true;
     },
@@ -33,11 +31,9 @@ export const userReducer = createReducer(
       // state.isAuthenticated = false;
       state.error = action.payload;
     },
-
     logoutuser: (state) => {
       state.loading = true;
     },
-
     logoutuserSuccess: (state, action) => {
       state.loading = false;
       state.isAuthenticated = false;
@@ -49,7 +45,6 @@ export const userReducer = createReducer(
       state.isAuthenticated = true;
       state.error = action.payload;
     },
-
     userRegisterRequest: (state) => {
       state.loading = true;
     },
@@ -64,7 +59,6 @@ export const userReducer = createReducer(
       state.isAuthenticated = false;
       state.error = action.payload;
     },
-
     usercreatepostRequest: (state) => {
       state.loading = true;
     },
@@ -80,7 +74,6 @@ export const userReducer = createReducer(
       state.isAuthenticated = false;
       state.error = action.payload;
     },
-
     usergetallpostRequest: (state) => {
       state.loading = true;
     },
@@ -93,7 +86,6 @@ export const userReducer = createReducer(
       state.loading = false;
       state.isAuthenticated = false;
     },
-
     userpostRequest: (state) => {
       state.loading = true;
     },
@@ -106,7 +98,6 @@ export const userReducer = createReducer(
       state.loading = false;
       state.isAuthenticated = false;
     },
-
     alluserdataRequest: (state) => {
       state.loading = true;
     },
@@ -121,7 +112,6 @@ export const userReducer = createReducer(
       state.isAuthenticated = false;
       state.error = action.payload;
     },
-
     usercommentRequest: (state) => {
       state.loading = true;
     },
@@ -136,7 +126,6 @@ export const userReducer = createReducer(
       state.isAuthenticated = false;
       state.error = action.payload;
     },
-
     getcategoryRequest: (state) => {
       state.loading = true;
     },
@@ -149,7 +138,6 @@ export const userReducer = createReducer(
       state.loading = false;
       state.isAuthenticated = false;
     },
-
     getlikeRequest: (state) => {
       state.loading = true;
     },
@@ -163,7 +151,6 @@ export const userReducer = createReducer(
       state.loading = false;
       state.error = action.payload;
     },
-
     getreportRequest: (state) => {
       state.loading = true;
     },
@@ -177,7 +164,6 @@ export const userReducer = createReducer(
       state.loading = false;
       state.error = action.payload;
     },
-
     deletepostRequest: (state) => {
       state.loading = true;
     },
@@ -189,11 +175,9 @@ export const userReducer = createReducer(
       state.loading = false;
       state.error = action.payload;
     },
-
     cleanError: (state) => {
       state.error = null;
     },
-
     cleanMessage: (state) => {
       state.message = null;
     },

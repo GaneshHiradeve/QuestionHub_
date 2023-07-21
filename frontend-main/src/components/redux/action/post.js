@@ -44,6 +44,7 @@ export const getallPost = () => async (dispatch) => {
     });
   }
 };
+
 export const getuserPost = () => async (dispatch) => {
   try {
     dispatch({ type: "userpostRequest" });
@@ -70,18 +71,12 @@ export const getuserPost = () => async (dispatch) => {
 export const getpostCategory = (category) => async (dispatch) => {
   try {
     dispatch({ type: "getcategoryRequest" });
-
-    const { data } = await axios.get(
-      `${server}/user/${category}`,
-
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
-      }
-    );
-
+    const { data } = await axios.get(`${server}/user/${category}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      withCredentials: true,
+    });
     dispatch({ type: "getcategorySuccess", payload: data });
   } catch (err) {
     dispatch({ type: "getcategoryFail", payload: err.response.data.message });
@@ -91,7 +86,6 @@ export const getpostCategory = (category) => async (dispatch) => {
 export const getpostLike = (id) => async (dispatch) => {
   try {
     dispatch({ type: "getlikeRequest" });
-
     const { data } = await axios.get(`${server}/like/${id}`, {
       headers: {
         "Content-Type": "application/json",
@@ -107,14 +101,12 @@ export const getpostLike = (id) => async (dispatch) => {
 export const getpostReport = (id) => async (dispatch) => {
   try {
     dispatch({ type: "getreportRequest" });
-
     const { data } = await axios.get(`${server}/report/${id}`, {
       headers: {
         "Content-Type": "application/json",
       },
       withCredentials: true,
     });
-
     dispatch({ type: "getreportSuccess", payload: data });
   } catch (err) {
     dispatch({ type: "getreportFail", payload: err.response.data.message });

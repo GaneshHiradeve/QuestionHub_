@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { getuserProfile } from "./components/redux/action/user";
 import Swal from "sweetalert2";
 import { getallPost, getuserPost } from "./components/redux/action/post";
-import AdminDash from "./components/dashboard/AdminDash";
+// import AdminDash from "./components/dashboard/AdminDash";
 // import { ClassNames } from "@emotion/react";
 // import Userpost from "./components/Userpost";
 // import { toast } from "react-toastify";
@@ -186,7 +186,7 @@ function App() {
             }
           />
 
-          <Route
+          {/* <Route
             path="/admindash"
             element={
               <ProtectedRoute
@@ -198,7 +198,7 @@ function App() {
                 <AdminDash userData={allData} />
               </ProtectedRoute>
             }
-          />
+          /> */}
         </Routes>
       </Router>
     </Fragment>

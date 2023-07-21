@@ -26,13 +26,14 @@ import user1 from "./img/profile.png";
 function QuoraHeader() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { user } = useSelector((state) => state.user);
-  console.log(user);
+  // console.log(user);
   // description,categories
   // const [selction_cate, setselction_cate] = useState("sport");
   const [description, setDescription] = useState("");
   const [categories, setCategories] = useState("");
   const Close = <CloseIcon />;
   const dispatch = useDispatch();
+
   const PostHandler = (e) => {
     e.preventDefault();
     if (description.length > 2000) {
@@ -56,7 +57,8 @@ function QuoraHeader() {
   const userlogout = () => {
     dispatch(userLogout());
   };
-  const usernameslice = user.name.slice(0, 6);
+  const usernameslice = user.name.slice(0, 50);
+
   return (
     <div className="qHeader">
       <div className="qHeader-content">
@@ -80,13 +82,13 @@ function QuoraHeader() {
               </Tooltip>
             </div>
           </Link>
-          <Link to={"/admindash"}>
+          {/* <Link to={"/admindash"}>
             <div className="qHeader__icon">
-              <Tooltip title="Assign" placement="bottom">
+              <Tooltip title="Admin Dashboard" placement="bottom">
                 <AssignmentTurnedInIcon />
               </Tooltip>
             </div>
-          </Link>
+          </Link> */}
           <div className="qHeader__icon">
             <Tooltip title="People" placement="bottom">
               <PeopleAltIcon />
@@ -94,7 +96,11 @@ function QuoraHeader() {
           </div>
           <div className="qHeader__input">
             <SearchIcon />
-            <input type="text" placeholder="Search Questions" style={{textAlign: "start"}}  />
+            <input
+              type="text"
+              placeholder="Search Questions"
+              style={{ textAlign: "start" }}
+            />
           </div>
         </div>
         <div className="qHeader__Rem">
@@ -166,12 +172,12 @@ function QuoraHeader() {
               </label>
             </div>
             <div className="modal__Field">
-              <Input
+              {/* <Input
                 type="text"
                 placeholder="Create Your Post"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-              />
+              /> */}
               <div
                 style={{
                   display: "flex",

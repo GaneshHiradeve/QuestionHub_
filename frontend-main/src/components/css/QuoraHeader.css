@@ -1,15 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
 .qHeader {
-  /* display: flex;
-  align-items: center; */
   background-color: #fff;
   position: sticky;
   color: #000;
-  /* position: relative; */
   z-index: 1000;
   top: 0px;
-  /* box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.5); */
   box-shadow: 2px 3px 6px rgba(187, 187, 187, 0.5);
-  /* justify-content: center; */
   padding: 3px;
 }
 
@@ -19,10 +15,8 @@
   justify-content: space-between;
   padding: 0 2rem;
   width: 100%;
-  /* margin-left: 190px; */
-  /* margin-right: auto; */
-  /* padding: 5px; */
 }
+
 /* .qHeader__logo{
   justify-content: flex-start;
 } */
@@ -32,7 +26,6 @@
   justify-content: flex-end;
   padding: 5px;
   width: 52%;
-  /* margin-left: -25px; */
   position: relative !important;
 }
 
@@ -43,13 +36,11 @@
   font-weight: bold !important;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .logoname {
     margin-left: 1rem !important;
   }
 }
-
-
 
 .qHeader__icon {
   padding: 5px;
@@ -61,14 +52,14 @@
   border-radius: 5px;
 }
 
-.qHeader__icon>.MuiSvgIcon-root {
+.qHeader__icon > .MuiSvgIcon-root {
   color: #000;
   font-size: xx-large;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.qHeader__icon:hover>.MuiSvgIcon-root {
+.qHeader__icon:hover > .MuiSvgIcon-root {
   color: #666;
 }
 
@@ -86,7 +77,7 @@
   cursor: pointer;
 }
 
-.qHeader__input>input {
+.qHeader__input > input {
   text-align: center;
   margin-bottom: 6px;
   background-color: transparent;
@@ -99,28 +90,25 @@
   color: #666;
 }
 
-.qHeader__input>.MuiSvgIcon-root {
+.qHeader__input > .MuiSvgIcon-root {
   color: rgb(55, 54, 54);
 }
 
 .qHeader__avatar {
   cursor: pointer;
   padding: 0px 0px 100px;
-
 }
-
 
 /* .qHeader__Avatarcom{
   margin-left: 100px;
 } */
+
 .qHeader__Rem {
   display: flex;
   align-items: center;
-  /* margin-left: px; */
-
 }
 
-.qHeader__Rem>.MuiSvgIcon-root {
+.qHeader__Rem > .MuiSvgIcon-root {
   font-size: xx-large;
   color: rgb(0, 0, 0);
   margin-left: 200px;
@@ -128,11 +116,11 @@
   align-self: right;
 }
 
-.qHeader__Rem>.MuiSvgIcon-root:hover {
+.qHeader__Rem > .MuiSvgIcon-root:hover {
   color: #000;
 }
 
-.qHeader__Rem>.MuiButton-root {
+.qHeader__Rem > .MuiButton-root {
   color: #fff;
   background: #000;
   text-transform: inherit;
@@ -140,7 +128,7 @@
   margin-left: 25px;
 }
 
-.qHeader__Rem>.MuiButton-root:hover {
+.qHeader__Rem > .MuiButton-root:hover {
   color: rgb(255, 255, 255);
   background: #666;
 }
@@ -153,7 +141,7 @@
   border-bottom: 1px solid rgba(187, 187, 187, 0.5);
 }
 
-.modal__title>h5 {
+.modal__title > h5 {
   color: gray;
   font-size: 20px;
   cursor: pointer;
@@ -161,7 +149,7 @@
   margin-right: 30px;
 }
 
-.modal__title>h5:hover {
+.modal__title > h5:hover {
   color: #b92b27;
 }
 
@@ -171,13 +159,13 @@
   margin-top: 30px;
 }
 
-.modal__info>p {
+.modal__info > p {
   margin-left: 10px;
   font-size: small;
   color: gray;
 }
 
-.modal_info>.modal_scope {
+.modal_info > .modal_scope {
   display: flex;
   align-items: center;
   color: rgb(98, 98, 98);
@@ -195,14 +183,14 @@
   flex: 1;
 }
 
-.modal_Field>.modal_fieldLink {
+.modal_Field > .modal_fieldLink {
   color: gray;
   display: flex;
   margin-top: 10px;
   align-items: center;
 }
 
-.modal_Field>.modal_fieldLink>input {
+.modal_Field > .modal_fieldLink > input {
   flex: 1;
   border: none;
   outline: none;
@@ -221,22 +209,22 @@
   align-items: center;
 }
 
-
-.modal__buttons>.add {
+.modal__buttons > .add {
   border: none;
   outline: none;
   margin-top: 45px;
   background-color: #222;
   color: white;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
   padding: 10px;
   border-radius: 33px;
   cursor: pointer;
   width: 50%;
-  /* margin-left: 250px; */
 }
 
-.modal__buttons>.add:hover {
+.modal__buttons > .add:hover {
   background-color: #eee;
   color: #222;
 }

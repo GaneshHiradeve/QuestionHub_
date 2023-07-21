@@ -1,7 +1,6 @@
 .feed {
   display: flex;
   flex-direction: column;
-  /* flex: 0.6; */
   width: 50rem;
   justify-content: center;
 }
@@ -14,9 +13,7 @@
   .feed {
     display: flex;
     flex-direction: column;
-    /* flex: 0.6; */
     margin-left: 14rem;
     width: 30rem;
-    /* justify-content: space-between; */
   }
 }

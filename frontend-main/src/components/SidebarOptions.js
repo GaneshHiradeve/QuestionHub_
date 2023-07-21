@@ -1,15 +1,16 @@
 import React from "react";
 import "./css/SidebarOptions.css";
-import Tech from "./img/Technology.jpg";
-import lifestyle from "./img/lifestyle.jpg";
-import food from "./img/food.jpg";
-import echo from "./img/economics.jpg";
-import politics from "./img/politics.jpg";
-import sport from "./img/sport.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getpostCategory } from "./redux/action/post";
-import {Activity, BadgeDollarSign, Laptop2, Siren, Soup, Trophy} from 'lucide-react'
+import {
+  Activity,
+  BadgeDollarSign,
+  Laptop2,
+  Siren,
+  Soup,
+  Trophy,
+} from "lucide-react";
 
 function SidebarOptions() {
   const navigate = useNavigate();
@@ -18,51 +19,45 @@ function SidebarOptions() {
     e.preventDefault();
     dispatch(getpostCategory(category));
   };
+
   return (
     <div className="sidebarOptions">
-
       <Link to={"/technology"} style={{ textDecoration: "none" }}>
         <div
           className="sidebarOption "
           onClick={(e) => {
             CategoryHandler(e, "technology");
-            navigate('/technology')
+            navigate("/technology");
           }}
         >
-        
           <Laptop2 size={25} color="#222" strokeWidth={2} />
           <h5 style={{ marginLeft: "10px", color: "black" }}>Technology</h5>
-          
         </div>
       </Link>
-
 
       <Link to={"/lifestyle"} style={{ textDecoration: "none" }}>
         <div
           className="sidebarOption"
           onClick={(e) => {
             CategoryHandler(e, "lifestyle");
-            navigate('/lifestyle')
+            navigate("/lifestyle");
           }}
         >
-          <Activity size={25} color="#222" strokeWidth={2}/>
+          <Activity size={25} color="#222" strokeWidth={2} />
           <h5 style={{ marginLeft: "10px", color: "black" }}>Lifestyle</h5>
-          
         </div>
       </Link>
-
 
       <Link to={"/politics"} style={{ textDecoration: "none" }}>
         <div
           className="sidebarOption"
           onClick={(e) => {
             CategoryHandler(e, "politics");
-            navigate('/politics')
+            navigate("/politics");
           }}
         >
-          <Siren size={25} color="#222" strokeWidth={2}/>
-          <h5 style={{ marginLeft: "10px", color: "black" }}>Politics</h5> 
-        
+          <Siren size={25} color="#222" strokeWidth={2} />
+          <h5 style={{ marginLeft: "10px", color: "black" }}>Politics</h5>
         </div>
       </Link>
 
@@ -71,12 +66,11 @@ function SidebarOptions() {
           className="sidebarOption"
           onClick={(e) => {
             CategoryHandler(e, "food");
-            navigate('/food')
+            navigate("/food");
           }}
         >
-          <Soup size={25} color="#222" strokeWidth={2}/>
+          <Soup size={25} color="#222" strokeWidth={2} />
           <h5 style={{ marginLeft: "10px", color: "black" }}>Food</h5>
-          
         </div>
       </Link>
 
@@ -85,27 +79,24 @@ function SidebarOptions() {
           className="sidebarOption"
           onClick={(e) => {
             CategoryHandler(e, "economics");
-            navigate('/economics')
+            navigate("/economics");
           }}
         >
-          <BadgeDollarSign size={25} color="#222" strokeWidth={2}/>
+          <BadgeDollarSign size={25} color="#222" strokeWidth={2} />
           <h5 style={{ marginLeft: "10px", color: "black" }}>Economics</h5>
-          
         </div>
       </Link>
-
 
       <Link to={"/sport"} style={{ textDecoration: "none" }}>
         <div
           className="sidebarOption"
           onClick={(e) => {
             CategoryHandler(e, "sport");
-            navigate('/sport')
+            navigate("/sport");
           }}
-        > 
-          <Trophy size={25} color="#222" strokeWidth={2} /> 
+        >
+          <Trophy size={25} color="#222" strokeWidth={2} />
           <h5 style={{ marginLeft: "10px", color: "black" }}>Sport</h5>
-          
         </div>
       </Link>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./add.css";
 const Additem = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className="dash">

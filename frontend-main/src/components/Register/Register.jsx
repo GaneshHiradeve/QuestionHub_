@@ -14,6 +14,7 @@ function Register() {
   const [cpassword, setcpassword] = useState("");
   const [name, setname] = useState("");
   const dispatch = useDispatch();
+
   const submithandler = (e) => {
     e.preventDefault();
     dispatch(userRegister(name, email, password, cpassword));

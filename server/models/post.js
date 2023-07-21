@@ -6,26 +6,22 @@ const PostSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
-  name:{
-    type:String
+  name: {
+    type: String,
   },
   createdAt: {
     type: Date,
     default: Date.now(),
   },
-  categories:{
-    type:String
+  categories: {
+    type: String,
   },
-  upvote:{
-  type:Number,
-  default:0,
+  upvote: {
+    type: Number,
+    default: 0,
   },
-  
-  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-
-  reports:[{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
-  
-  
+  likes: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+  reports: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
 });
 
 export const Post = mongoose.model("Post", PostSchema);

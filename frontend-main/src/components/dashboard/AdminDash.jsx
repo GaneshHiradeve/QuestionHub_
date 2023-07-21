@@ -31,7 +31,7 @@ import Additem from "./Additem";
 // }
 
 const AdminDash = ({ userData }) => {
-  console.log(userData);
+  // console.log(userData);
   return (
     <div>
       <div className="feed">
@@ -39,7 +39,6 @@ const AdminDash = ({ userData }) => {
         {/* {posts.map((post, index) => (
         <Post key={index} post={post} />
       ))} */}
-
         {userData &&
           userData.map((data, index) => {
             return <Additem key={index} data={data} />;

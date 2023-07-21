@@ -1,31 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
 
-.background{
+.background {
   width: 430px;
   height: 520px;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  
 }
 
 /*  */
-.formbody{
+.formbody {
   height: 520px;
   width: 400px;
   background-color: rgb(18, 20, 24);
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 50px 35px;
 }
 
-.inputboxr{
+.inputboxr {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,21 +33,21 @@
   margin: 10px 0px;
 }
 
-.formbody *{
-  font-family: 'Poppins',sans-serif;
+.formbody * {
+  font-family: "Quicksand", sans-serif;
   color: #ffffff;
   letter-spacing: 0.5px;
   outline: none;
   border: none;
 }
-.formbody h3{
+.formbody h3 {
   font-size: 32px;
   font-weight: 500;
   line-height: 42px;
   text-align: center;
 }
 
-.signup{
+.signup {
   text-align: center;
   margin-top: -10px;
 }
@@ -67,7 +67,8 @@
 /* ::placeholder{
   color: #e5e5e5;
 } */
-.but{
+
+.but {
   margin-top: 20px;
   width: 70%;
   background-color: #ffffff;
@@ -79,19 +80,19 @@
   cursor: pointer;
 }
 
-.butlog{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-.or{
-  margin: 10px 0px;
-  text-align: center;
- 
+.butlog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.or p{
+.or {
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.or p {
   font-size: medium;
   font-weight: 900;
 }
