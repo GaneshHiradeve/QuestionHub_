@@ -115,7 +115,6 @@ function Post({ data, like }) {
           >
             Reply
           </button>
-
           {user && user.role === "admin" ? (
             <>
               <button
@@ -139,17 +138,6 @@ function Post({ data, like }) {
           )}
         </div>
       </div>
-
-      <p
-        style={{
-          color: "rgba(0,0,0,0.5)",
-          fontSize: "12px",
-          fontWeight: "bold",
-          margin: "10px 0",
-        }}
-      >
-        This is test answer
-      </p>
       <div
         style={{
           margin: "5px 0px 0px 0px",
@@ -178,16 +166,6 @@ function Post({ data, like }) {
             }}
             className="post-answered"
           >
-            {/* <Avatar />
-            <div
-              style={{
-                margin: "0px 10px",
-              }}
-              className="post-info"
-            >
-              <p>Username</p>
-              <span>Timestamp</span>
-            </div> */}
           </div>
           <div className="post-answer">This is Test answer</div>
         </div>

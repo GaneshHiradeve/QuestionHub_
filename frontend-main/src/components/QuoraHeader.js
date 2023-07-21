@@ -96,27 +96,28 @@ function QuoraHeader() {
             <SearchIcon />
             <input type="text" placeholder="Search Questions" style={{textAlign: "start"}}  />
           </div>
-          
         </div>
         <div className="qHeader__Rem">
           <Avatarmodal
-            // style={{ color: "green" }}
             src={user1}
             className="qHeader__Avatarcom"
             userdata={user}
-            
           />
           <div
             className="qHeader__icon"
             style={{
               color: "#000",
-              fontWeight: "700"
+              fontWeight: "700",
             }}
           >
             {usernameslice}..
           </div>
-          <Button className="headerButton" onClick={() => setIsModalOpen(true)}>Post</Button>
-          <Button className="headerButton" onClick={userlogout}>Logout</Button>
+          <Button className="headerButton" onClick={() => setIsModalOpen(true)}>
+            Post
+          </Button>
+          <Button className="headerButton" onClick={userlogout}>
+            Logout
+          </Button>
         </div>
         <Modal
           open={isModalOpen}
@@ -155,12 +156,12 @@ function QuoraHeader() {
                   value={categories}
                   onChange={(e) => setCategories(e.target.value)}
                 >
-                  <option value="sport">sport</option>
-                  <option value="economics">economics</option>
-                  <option value="technology">technology</option>
-                  <option value="food">food</option>
-                  <option value="lifestyle">lifestyle</option>
-                  <option value="politics">politics</option>
+                  <option value="sport">Sport</option>
+                  <option value="economics">Economics</option>
+                  <option value="technology">Technology</option>
+                  <option value="food">Food</option>
+                  <option value="lifestyle">Lifestyle</option>
+                  <option value="politics">Politics</option>
                 </select>
               </label>
             </div>
