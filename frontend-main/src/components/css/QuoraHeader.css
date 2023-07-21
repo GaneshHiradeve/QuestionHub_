@@ -95,8 +95,8 @@
   color: #000;
 }
 
-.inputsearch ::placeholder {
-  color: rgb(0, 0, 0);
+.qHeader__input ::placeholder {
+  color: #666;
 }
 
 .qHeader__input>.MuiSvgIcon-root {
