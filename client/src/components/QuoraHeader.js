@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { CreatePost } from "./redux/action/post";
 import { userLogout } from "./redux/action/user";
 import { Tooltip } from "@mui/material";
+import { Input } from '@mui/material';
 
 import "react-responsive-modal/styles.css";
 import "./css/QuoraHeader.css";
@@ -174,12 +175,12 @@ function QuoraHeader() {
               </label>
             </div>
             <div className="modal__Field">
-              {/* <Input
+              <Input
                 type="text"
                 placeholder="Create Your Post"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-              /> */}
+              />
               <div
                 style={{
                   display: "flex",
