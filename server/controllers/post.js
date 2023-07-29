@@ -58,7 +58,7 @@ export const  getallPostdata = async (req, res) => {
   res.status(201).json({
     success: true,
     allData: allData,
-    message: "all data done",
+    message: "all data done ",
   });
 };
 
